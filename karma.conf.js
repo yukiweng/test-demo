@@ -10,36 +10,40 @@ module.exports = function (config) {
       'node_modules',
       '**/*.md'
     ],
-    reporters: ['progress', 'coverage-istanbul'], // coverage-istanbul生成代码测试覆盖率报
+    reporters: ['progress', 'coverage'], // 生成代码测试覆盖率报
 
-
-    // 生成代码测试覆盖率报告
-    coverageIstanbulReporter: {
-      dir: './coverage',
-      // html文件、控制台
-      reports: ['html', 'text-summary'],
-      fixWebpackSourcePaths: true,
-      // html格式报告路径 ./coverage/html/
-      'report-config': {
-        html: {
-          subdir: 'html'
+    coverageReporter: {
+      dir: 'coverage/',
+      reporters: [
+        { type: 'html', subdir: 'report-html' },
+        { type: 'text-summary', subdir: '.', file: 'text-summary.txt' },
+      ],
+      check: {
+        // 全局覆盖率
+        global: {
+          statements: 90,
+          branches: 90,
+          functions: 90,
+          lines: 90,
         }
       }
     },
+
+    preprocessors: {
+      'test/unit/*.spec.js': ['webpack'],
+      'src/**/*.js': ['coverage']
+    },
+
+    webpack: webpackConfig,
+
     browsers: ['ChromeHeadless'],
 
     plugins: [
       'karma-mocha',
       'karma-chrome-launcher',
       'karma-webpack',
-      // 'karma-coverage', // 由于使用webpack打包，混入其他代码或变量被私有化，导致karma-coverage统计的覆盖率不准，故改用karma-coverage-istanbul-reporter
-      'karma-coverage-istanbul-reporter'
+      'karma-coverage'
     ],
-    preprocessors: {
-      'test/unit/*.spec.js': ['webpack'],
-    },
-
-    webpack: webpackConfig,
 
     singleRun: true,
 
