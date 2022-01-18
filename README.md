@@ -1,11 +1,16 @@
 ##### 测试框架
 - `Mocha` 适用于 NodeJS 和 浏览器，简易灵活
-- `Jest` Facebook 开源的测试框架，用于脸书系和 ReactJS 系
+- `Jest` Facebook 开源的测试框架，多用于脸书系和 ReactJS 系
 
 | 测试框架 | 断言 | Mock | 异步 |
 | :---- | :---- | :---- | :---- |
 | Jest | 默认支持 | 默认支持 | 友好 |
 | Mocha | 不支持(可配置) | 不支持(可配置) | 友好
+
+https://guoyunhe.me/2021/03/19/unit-test-jest-to-karma-mocha-chai/
+
+> `master` 是Karma + Mocha + Chai + Sinon 相关demo
+> `V2` 是 Jest 相关demo
 
 <br />
 
