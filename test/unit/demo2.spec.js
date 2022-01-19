@@ -1,6 +1,6 @@
 // 异步测试
 import { expect } from 'chai'
-import asyncFn from '@src/demo2/demo2'
+import asyncFn from '../../src/demo2/demo2.js'
 
 describe('demo2 异步测试 ===>', () => {
     it('测试应该3秒后结束', (done) => {

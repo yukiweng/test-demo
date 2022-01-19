@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import sinon from 'sinon'
-import sayHello from '@src/demo4/demo4'
+import sayHello from '../../src/demo4/demo4.js'
 
 describe("demo4 sinon ===>", function () {
     it("should return msg", function () {

@@ -1,4 +1,4 @@
-import { firstFn, secondFn } from '@src/demo3/demo3'
+import { firstFn, secondFn } from '../../src/demo3/demo3.js'
 
 describe('demo3 hook ===>', function () {
     before(function () {
