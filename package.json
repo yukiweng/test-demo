@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "jest": "npx jest",
+    "jest": "jest",
     "test": "npm run jest"
   },
   "author": "yuki",
