@@ -6,10 +6,9 @@ module.exports = function (config) {
     frameworks: ['mocha'],
 
     files: ['test/unit/*.spec.js'],
-    exclude: [
-      'node_modules',
-      '**/*.md'
-    ],
+
+    exclude: ['node_modules'],
+
     reporters: ['progress', 'coverage'], // 生成代码测试覆盖率报
 
     coverageReporter: {

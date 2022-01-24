@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "mocha": "npx mocha test/unit/*.spec.js",
-    "test": "npx karma start"
+    "mocha": "mocha test/unit/*.spec.js",
+    "test": "karma start"
   },
   "author": "yuki",
   "license": "MIT",
@@ -23,6 +23,5 @@
     "mocha": "^9.1.3",
     "sinon": "^12.0.1",
     "webpack": "^5.66.0"
-  },
-  "type": "module"
+  }
 }
